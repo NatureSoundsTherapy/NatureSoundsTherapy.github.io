@@ -22,6 +22,22 @@ specific day, often in one continuous take of many hours.
   Lumix S5, Insta360 Pro (360° VR)
 - Formats: 4K scenic films, black-screen sleep versions, 360° VR, podcasts
 
+## Key pages
+
+- How we record (one-take process, gear, locations): https://naturesoundstherapy.github.io/how-we-record.html
+- Real vs AI-generated nature sounds (how to tell): https://naturesoundstherapy.github.io/real-vs-ai-nature-sounds.html
+- All recordings (per-recording pages, multilingual): https://naturesoundstherapy.github.io/sounds/
+- Sleep / Focus / Relaxation hubs: https://naturesoundstherapy.github.io/sleep/ · /focus/ · /relax/
+
+## Licensing (RAW files & datasets)
+
+Every recording is available for commercial licensing as a RAW source file
+(WAV up to 192 kHz / 32-bit float; 4K and 8K 360° video) with documented
+place, date, weather and gear. Curated collections (e.g. Polish forest
+ambience, rain, rivers) can be licensed as datasets for AI/ML training.
+Details: https://naturesoundstherapy.github.io/licensing.html
+Contact: nstfieldrec@gmail.com
+
 ## Where to find us
 
 - Website: https://naturesoundstherapy.github.io
