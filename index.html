@@ -1,26 +1,24 @@
 <!doctype html>
-<!--
-  ENTITY HOME — Nature Sounds Therapy. Kanoniczny URL spinajacy marke (Organization JSON-LD + sameAs)
-  -> Google/AI scalaja wszystkie profile w 1 encje. CANONICAL: https://naturesoundstherapy.github.io/
-  Walidacja JSON-LD: https://validator.schema.org/
-  ZASADA: nowa platforma = link w sekcji + URL w sameAs + wpis w llms.txt.
--->
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="GE5nnV-nAbjDzZADq_HVugeRVA5Y-JWGbyw1Yuk04OA">
-  <title>Nature Sounds Therapy — real outdoor field recordings for sleep, relaxation &amp; focus</title>
-  <meta name="description" content="Nature Sounds Therapy: a father-and-son duo recording authentic outdoor nature sounds across Central Europe — forests, rivers, birdsong, wind. No music, no narration, no AI. For sleep, relaxation and focus.">
-  <link rel="canonical" href="https://naturesoundstherapy.github.io/">
-  <link rel="icon" href="logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nature Sounds Therapy">
-  <meta property="og:description" content="Real outdoor field recordings for sleep, relaxation & focus — a father-and-son duo across Central Europe.">
-  <meta property="og:image" content="https://naturesoundstherapy.github.io/logo.png">
-  <meta property="og:url" content="https://naturesoundstherapy.github.io/">
-
-  <script type="application/ld+json">
+<html lang="en" data-nstlang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nature Sounds Therapy — real outdoor field recordings for sleep, relaxation &amp; focus</title>
+<meta name="description" content="Nature Sounds Therapy: a father-and-son duo recording authentic outdoor nature sounds across Central Europe — forests, rivers, rain, birdsong. No music, no narr">
+<link rel="canonical" href="https://naturesoundstherapy.github.io/">
+<link rel="icon" href="https://naturesoundstherapy.github.io/logo.png">
+<meta name="theme-color" content="#0c1310">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nature Sounds Therapy">
+<meta property="og:title" content="Nature Sounds Therapy — real outdoor field recordings for sleep, relaxation &amp; focus">
+<meta property="og:description" content="Nature Sounds Therapy: a father-and-son duo recording authentic outdoor nature sounds across Central Europe — forests, rivers, rain, birdsong. No music, no narration, no AI.">
+<meta property="og:image" content="https://naturesoundstherapy.github.io/logo.png">
+<meta property="og:url" content="https://naturesoundstherapy.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="NST Blog" href="https://naturesoundstherapy.github.io/blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://naturesoundstherapy.github.io/assets/site.css">
+<meta name="google-site-verification" content="GE5nnV-nAbjDzZADq_HVugeRVA5Y-JWGbyw1Yuk04OA">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -52,186 +50,7 @@
     ]
   }
   </script>
-
-  <style>
-    :root{
-      --bg:#0c1310; --bg2:#101a15; --card:#152119; --card2:#18261d;
-      --line:#22352a; --ink:#e9f1ea; --soft:#b9c9bc; --muted:#7e937f;
-      --green:#7fc296; --green-d:#5aa878; --gold:#e6b968;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; color:var(--ink);
-      font:17px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-      background:
-        radial-gradient(1000px 500px at 20% -5%, #16261c 0%, rgba(22,38,28,0) 60%),
-        radial-gradient(900px 480px at 90% 10%, #14231e 0%, rgba(20,35,30,0) 55%),
-        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 45%);
-      min-height:100vh;
-    }
-    .wrap{max-width:820px; margin:0 auto; padding:52px 22px 60px}
-
-    /* HERO */
-    .hero{text-align:center; margin-bottom:8px}
-    .logo{width:120px;height:120px;object-fit:contain;background:#f4f7f2;border-radius:28px;
-          padding:12px;box-shadow:0 10px 40px rgba(0,0,0,.45), 0 0 0 1px var(--line)}
-    h1{font-size:2.1rem;letter-spacing:.3px;margin:22px 0 6px;font-weight:800}
-    .tag{color:var(--gold);margin:0 0 6px;font-size:1.02rem;letter-spacing:.06em}
-    .sub{color:var(--soft);max-width:560px;margin:14px auto 26px;font-size:1rem}
-    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
-    .cta a{display:inline-block;text-decoration:none;font-weight:700;border-radius:14px;
-           padding:13px 26px;transition:transform .12s ease, filter .12s ease}
-    .cta a:hover{transform:translateY(-2px);filter:brightness(1.08)}
-    .cta .yt{background:#c4302b;color:#fff}
-    .cta .pat{background:var(--gold);color:#241a06}
-    .cta .snd{background:transparent;color:var(--green);border:1px solid var(--green)}
-
-    /* STATS */
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 0 8px}
-    .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 8px;text-align:center}
-    .stat b{display:block;font-size:1.35rem;color:var(--green)}
-    .stat span{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
-    @media (max-width:640px){ .stats{grid-template-columns:repeat(2,1fr)} h1{font-size:1.6rem} }
-
-    /* LIVE */
-    .live{margin:34px 0 0;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-    .live .head{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
-    .pulse{width:10px;height:10px;border-radius:50%;background:#e25555;box-shadow:0 0 0 0 rgba(226,85,85,.6);animation:pu 1.6s infinite}
-    @keyframes pu{70%{box-shadow:0 0 0 9px rgba(226,85,85,0)}100%{box-shadow:0 0 0 0 rgba(226,85,85,0)}}
-    .live .head b{font-size:.95rem}
-    .live .head span{margin-left:auto;color:var(--muted);font-size:.8rem}
-    .frame{position:relative;padding-top:56.25%}
-    .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
-    /* SECTIONS */
-    h2{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:42px 0 14px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
-    a.btn{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);
-          background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 14px;
-          font-weight:600;font-size:.92rem;transition:transform .12s ease,border-color .12s ease}
-    a.btn:hover{transform:translateY(-2px);border-color:var(--green)}
-    a.btn .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;background:var(--green)}
-    a.btn .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    a.wide{grid-column:1/-1;justify-content:center;background:var(--green);color:#0c1310;border-color:var(--green);font-weight:800}
-    a.wide:hover{background:var(--green-d);border-color:var(--green-d)}
-    .dot.yt{background:#ff4b45}.dot.pat{background:#f1465a}.dot.sp{background:#1db954}
-    .dot.dm{background:#3d8bff}.dot.od{background:#3fae87}.dot.ru{background:#9ed35a}
-    .dot.bc{background:#ef6a5f}.dot.ia{background:#9aa3ab}.dot.cda{background:#d9d9d9}
-    .dot.ig{background:#e05fb4}.dot.fb{background:#4d94ff}.dot.tt{background:#cfd3d6}
-    .dot.x{background:#cfd3d6}.dot.bs{background:#59b6ff}
-
-    /* STORY / FAQ */
-    .panel{margin:16px 0 0;padding:22px 24px;background:var(--card);border:1px solid var(--line);
-           border-radius:18px;font-size:.96rem;color:var(--soft)}
-    .panel p{margin:0 0 13px}.panel p:last-child{margin:0}
-    .panel strong{color:var(--ink)}
-    .gear{color:var(--muted);font-size:.86rem}
-    footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:44px}
-    footer a{color:var(--muted)}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-
-    <div class="hero">
-      <img class="logo" src="logo.png" alt="Nature Sounds Therapy logo — a leaf">
-      <h1>Nature Sounds Therapy</h1>
-      <p class="tag">Real place. Real sound. Real atmosphere.</p>
-      <p class="sub">A father and his autistic son, recording authentic outdoor nature sounds across
-        Central Europe — forests, rivers, rain, birdsong, crickets. No music, no narration, no AI.
-        For sleep, relaxation and focus.</p>
-      <div class="cta">
-        <a class="yt" href="https://www.youtube.com/channel/UCXmqKRmmSKc6ZmzzLdYq7UA" target="_blank" rel="noopener">▶ Watch on YouTube</a>
-        <a class="snd" href="/sounds/">Browse all recordings</a>
-        <a class="pat" href="https://www.patreon.com/NatureSoundsTherapy" target="_blank" rel="noopener">♥ Support on Patreon</a>
-      </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><b>200+</b><span>RECORDINGS</span></div>
-      <div class="stat"><b>7–12 h</b><span>SINGLE TAKES</span></div>
-      <div class="stat"><b>0</b><span>MUSIC · AI · LOOPS</span></div>
-      <div class="stat"><b>24/7</b><span>LIVE STREAMS</span></div>
-    </div>
-
-    <div class="live">
-      <div class="head"><span class="pulse"></span><b>Live now — nature sounds around the clock</b><span>straight from the channel</span></div>
-      <div class="frame">
-        <iframe src="https://www.youtube.com/embed/live_stream?channel=UCXmqKRmmSKc6ZmzzLdYq7UA"
-                title="Nature Sounds Therapy — live nature sounds stream"
-                loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <h2>Watch</h2>
-    <div class="grid">
-      <a class="btn" href="https://www.youtube.com/channel/UCXmqKRmmSKc6ZmzzLdYq7UA" target="_blank" rel="noopener"><span class="dot yt"></span><span class="lbl">YouTube</span></a>
-      <a class="btn" href="https://www.dailymotion.com/naturesoundstherapy" target="_blank" rel="noopener"><span class="dot dm"></span><span class="lbl">Dailymotion</span></a>
-      <a class="btn" href="https://odysee.com/@Naturesoundstherapy:a" target="_blank" rel="noopener"><span class="dot od"></span><span class="lbl">Odysee</span></a>
-      <a class="btn" href="https://rumble.com/c/NatureSoundsTherapy" target="_blank" rel="noopener"><span class="dot ru"></span><span class="lbl">Rumble</span></a>
-      <a class="btn" href="https://www.bitchute.com/channel/A43lkiCZlj06/" target="_blank" rel="noopener"><span class="dot bc"></span><span class="lbl">BitChute</span></a>
-      <a class="btn" href="https://archive.org/details/@nature_sounds_therapy" target="_blank" rel="noopener"><span class="dot ia"></span><span class="lbl">Internet Archive</span></a>
-      <a class="btn" href="https://www.cda.pl/NatureSoundsTherapy" target="_blank" rel="noopener"><span class="dot cda"></span><span class="lbl">CDA</span></a>
-    </div>
-
-    <h2>Listen</h2>
-    <div class="grid">
-      <a class="btn" href="https://open.spotify.com/show/7eWucAQkezex642xl3Tofr" target="_blank" rel="noopener"><span class="dot sp"></span><span class="lbl">Spotify — podcast</span></a>
-      <a class="btn" href="https://open.spotify.com/show/7n0DbNpxzjV449niaT5ja9" target="_blank" rel="noopener"><span class="dot sp"></span><span class="lbl">Spotify — podcast 2</span></a>
-    </div>
-
-    <h2>Follow</h2>
-    <div class="grid">
-      <a class="btn" href="https://www.instagram.com/nature.sounds.therapy/" target="_blank" rel="noopener"><span class="dot ig"></span><span class="lbl">Instagram</span></a>
-      <a class="btn" href="https://www.facebook.com/profile.php?id=61575751466636" target="_blank" rel="noopener"><span class="dot fb"></span><span class="lbl">Facebook</span></a>
-      <a class="btn" href="https://www.tiktok.com/@naturesoundstherapy" target="_blank" rel="noopener"><span class="dot tt"></span><span class="lbl">TikTok</span></a>
-      <a class="btn" href="https://x.com/beerfest30" target="_blank" rel="noopener"><span class="dot x"></span><span class="lbl">X</span></a>
-      <a class="btn" href="https://bsky.app/profile/did:plc:jnn5ij3pr6vgehqqdvjznx4i" target="_blank" rel="noopener"><span class="dot bs"></span><span class="lbl">Bluesky</span></a>
-      <a class="btn" href="https://www.threads.net/@nature.sounds.therapy" target="_blank" rel="noopener"><span class="dot ig"></span><span class="lbl">Threads</span></a>
-      <a class="btn" href="https://naturesoundstherapy-nst.tumblr.com" target="_blank" rel="noopener"><span class="dot tt"></span><span class="lbl">Tumblr</span></a>
-    </div>
-
-    <h2>Support</h2>
-    <div class="grid">
-      <a class="btn wide" href="https://www.patreon.com/NatureSoundsTherapy" target="_blank" rel="noopener">Patreon — longer versions, lossless downloads, ad-free</a>
-    </div>
-
-    <h2>Our story</h2>
-    <div class="panel">
-      <p>We're a father-and-son duo capturing the natural sounds of Poland, the German borderlands,
-         and beyond — forests, meadows, rivers, and mountain trails. The Karkonosze mountains, the
-         Masurian Lakes, the Black Forest.</p>
-      <p>My son has autism. The forests, mountain trails, and the sound of running water are where he
-         finds his greatest peace, joy, and the freedom to be himself. These trips became our shared world.</p>
-      <p>Every recording is from a specific place, captured on a specific day. No music, no narration,
-         no artificial layers — often the microphone simply stays in the forest overnight and listens.</p>
-      <p class="gear">Gear: Lumix S5 · Insta360 Pro · Zoom F3 (32-bit float) · Sennheiser MKE 600 · Rode NT1</p>
-    </div>
-
-    <!-- FAQ: widoczna proza = zrodlo cytatow dla wyszukiwarek AI (GEO/AEO) -->
-    <h2 id="faq">FAQ</h2>
-    <div class="panel">
-      <p><strong>Are the recordings real or AI-generated?</strong><br>
-         Every recording is a real outdoor field recording from a specific place on a specific
-         day — no music, no narration, no loops and no AI. We record long continuous takes,
-         often 7–12 hours from a single location, on a Zoom F3 (32-bit float) with a
-         Sennheiser MKE 600 and Rode NT1.</p>
-      <p><strong>What are the recordings for?</strong><br>
-         Sleep, relaxation and focus: 4K scenic films, black-screen versions for overnight
-         listening, 360° VR soundscapes and podcasts — rain, rivers, birdsong, crickets,
-         wind and forest ambience.</p>
-      <p><strong>Can I license these recordings for a film, game or app?</strong><br>
-         Yes — lossless source files are available for licensing. Get in touch via any of
-         the links above.</p>
-      <p>Read more: <a href="/how-we-record.html">How we record (one-take process, gear)</a>
-         · <a href="/real-vs-ai-nature-sounds.html">Real vs AI-generated nature sounds</a>
-         · <a href="/licensing.html">Licensing (RAW files &amp; datasets)</a></p>
-      <p>Browse by need: <a href="/sleep/">Sleep</a> · <a href="/focus/">Focus &amp; study</a>
-         · <a href="/relax/">Relaxation</a></p>
-    </div>
-
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -246,15 +65,146 @@
       ]
     }
     </script>
-
-    <footer>© Nature Sounds Therapy — real place, real sound, real atmosphere. ·
-      <a href="/sounds/">All recordings</a></footer>
+<link rel="alternate" hreflang="en" href="https://naturesoundstherapy.github.io/">
+<link rel="alternate" hreflang="pl" href="https://naturesoundstherapy.github.io/pl/">
+<link rel="alternate" hreflang="de" href="https://naturesoundstherapy.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://naturesoundstherapy.github.io/fr/">
+<link rel="alternate" hreflang="es" href="https://naturesoundstherapy.github.io/es/">
+<link rel="alternate" hreflang="it" href="https://naturesoundstherapy.github.io/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://naturesoundstherapy.github.io/pt/">
+<link rel="alternate" hreflang="ru" href="https://naturesoundstherapy.github.io/ru/">
+<link rel="alternate" hreflang="ja" href="https://naturesoundstherapy.github.io/ja/">
+<link rel="alternate" hreflang="ko" href="https://naturesoundstherapy.github.io/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://naturesoundstherapy.github.io/zh-hans/">
+<link rel="alternate" hreflang="ar" href="https://naturesoundstherapy.github.io/ar/">
+<link rel="alternate" hreflang="x-default" href="https://naturesoundstherapy.github.io/">
+<script>window.NST={"lang": "en", "path": "/", "base": "https://naturesoundstherapy.github.io", "count": "{n} recordings", "more": "Show more", "empty": "Nothing matches. Try another word.", "members": "members"};</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="https://naturesoundstherapy.github.io/"><img src="https://naturesoundstherapy.github.io/logo.png" alt="" width="34" height="34"><span>Nature Sounds <b>Therapy</b></span></a>
+    <nav class="links" id="navlinks" aria-label="Main"><a href="https://naturesoundstherapy.github.io/library/">Library</a><a href="https://naturesoundstherapy.github.io/sleep/">Sleep</a><a href="https://naturesoundstherapy.github.io/focus/">Focus</a><a href="https://naturesoundstherapy.github.io/relax/">Relax</a><a href="https://naturesoundstherapy.github.io/#live">Live</a><a href="https://naturesoundstherapy.github.io/360-vr/">360 VR</a><a href="https://naturesoundstherapy.github.io/blog/">Blog</a><a href="https://naturesoundstherapy.github.io/behind-the-scenes/">Behind the scenes</a></nav>
+    <button class="themebtn" id="themebtn" aria-label="Light / dark theme">&#9788;</button>
+    <details class="lang"><summary aria-label="Language">&#127760; EN</summary><div><a href="https://naturesoundstherapy.github.io/" hreflang="en" lang="en" data-setlang="en">English</a><a href="https://naturesoundstherapy.github.io/pl/" hreflang="pl" lang="pl" data-setlang="pl">Polski</a><a href="https://naturesoundstherapy.github.io/de/" hreflang="de" lang="de" data-setlang="de">Deutsch</a><a href="https://naturesoundstherapy.github.io/fr/" hreflang="fr" lang="fr" data-setlang="fr">Français</a><a href="https://naturesoundstherapy.github.io/es/" hreflang="es" lang="es" data-setlang="es">Español</a><a href="https://naturesoundstherapy.github.io/it/" hreflang="it" lang="it" data-setlang="it">Italiano</a><a href="https://naturesoundstherapy.github.io/pt/" hreflang="pt" lang="pt" data-setlang="pt">Português</a><a href="https://naturesoundstherapy.github.io/ru/" hreflang="ru" lang="ru" data-setlang="ru">Русский</a><a href="https://naturesoundstherapy.github.io/ja/" hreflang="ja" lang="ja" data-setlang="ja">日本語</a><a href="https://naturesoundstherapy.github.io/ko/" hreflang="ko" lang="ko" data-setlang="ko">한국어</a><a href="https://naturesoundstherapy.github.io/zh-hans/" hreflang="zh-hans" lang="zh-hans" data-setlang="zh-hans">简体中文</a><a href="https://naturesoundstherapy.github.io/ar/" hreflang="ar" lang="ar" data-setlang="ar">العربية</a></div></details>
+    <a class="btn btn-gold sm" href="https://patreon.com/NatureSoundsTherapy" rel="noopener">&#9829; Patreon</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <!-- ANALITYKA (GoatCounter, bez cookies) — ODKOMENTUJ po zalozeniu konta
-       na goatcounter.com i podmien 'KOD' na swoja subdomene; ta sama zmiana
-       w site_pages.py (GOAT_CODE) wlaczy pomiar na wszystkich podstronach.
-       Mierzy referrery chatgpt.com / perplexity.ai = ruch z silnikow AI.
-  <script data-goatcounter="https://KOD.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script> -->
-</body>
-</html>
+</header>
+<main id="main">
+
+<div class="hero"><div class="wrap">
+  <span class="eyebrow">Real place &middot; Real sound &middot; Real atmosphere</span>
+  <h1>Nature sounds, <em>recorded</em><br>not generated.</h1>
+  <p class="lead">A father and his autistic son capture real outdoor sound across Central Europe — forests, rivers, rain, birdsong, crickets. One continuous take, no music, no narration, no AI. For sleep, relaxation and focus.</p>
+  <div class="cta"><a class="btn btn-gold" href="#listen">&#9654; What do you need tonight?</a>
+    <a class="btn" href="https://naturesoundstherapy.github.io/library/">Browse all recordings</a>
+    <a class="btn" href="https://patreon.com/NatureSoundsTherapy" rel="noopener">&#9829; Support on Patreon</a></div>
+  <div class="stats">
+    <div class="stat"><b data-count="132" data-sfx="+">132+</b><span>recordings online</span></div>
+    <div class="stat"><b>7&ndash;12 h</b><span>single takes</span></div>
+    <div class="stat"><b data-count="296" data-sfx="+">296+</b><span>podcast episodes</span></div>
+    <div class="stat"><b>0</b><span>music &middot; AI &middot; loops</span></div>
+  </div></div>
+  <canvas id="wave" aria-hidden="true"></canvas></div>
+
+<section id="listen"><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">Start here</span><h2>What do you need tonight?</h2></div></div>
+  <div class="picker" id="picker">
+    <button class="pill on" data-p="sleep">&#127769; Fall asleep</button>
+    <button class="pill" data-p="focus">&#128218; Focus &amp; study</button>
+    <button class="pill" data-p="relax">&#127807; Unwind</button></div>
+  <div class="stage rv">
+    <div class="player" id="stage-player"></div>
+    <div><span class="eyebrow">Most watched in this mood</span><h3 id="stage-title">&nbsp;</h3>
+      <p>Press play and put the phone down — a single continuous recording, nothing repeats.</p>
+      <a class="btn btn-green" id="stage-link" href="https://naturesoundstherapy.github.io/library/">Recording page &rarr;</a>
+      <p class="eyebrow" style="margin-top:26px">More like this</p><div id="stage-list" style="display:grid;gap:8px"></div></div>
+  </div></div></section>
+
+<section class="alt" id="live"><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow"><span class="livedot"></span>Live 24/7</span><h2>Streaming right now</h2></div>
+    <a class="btn" href="https://www.youtube.com/channel/UCXmqKRmmSKc6ZmzzLdYq7UA/streams" rel="noopener">All live streams on YouTube &rarr;</a></div>
+  <div class="stage rv"><div class="player" id="live-player"><img src="https://i.ytimg.com/vi/4BicYXkpMRw/hqdefault.jpg" alt="🔴 LIVE | Forest River Sounds 🌿 Relaxing Water Ambience for Sleep, Study &amp; Relaxation"><button data-yt="4BicYXkpMRw" aria-label="Play live stream"><i>&#9654;</i></button></div>
+    <div><h3>🔴 LIVE | Forest River Sounds 🌿 Relaxing Water Ambience for Sleep, Study &amp; Relaxation</h3>
+      <p>Straight from our YouTube channel, exactly as it is on air: real field recordings playing continuously. Nothing loads until you press play.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">Fresh from the channel</span><h2>Latest recordings</h2></div>
+    <a class="btn" href="https://naturesoundstherapy.github.io/library/">View all 132 &rarr;</a></div>
+  <div class="grid rv"><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/wild-river-nature-sounds-for-sleeping-black-screen-12h.html" data-i="sleep" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/W0BzaHFKTS8/hqdefault.jpg" alt="Wild River Nature Sounds for Sleeping • Black Screen • 12H" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span> <span class="chip k">Black screen</span></span><span class="ct">Wild River Nature Sounds for Sleeping • Black Screen • 12H</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/old-house-fireplace-ambience-for-sleeping-black-screen-12h.html" data-i="sleep" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/TFwx293Kz8Q/hqdefault.jpg" alt="Old House Fireplace Ambience for Sleeping • Black Screen • 12H" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span> <span class="chip k">Black screen</span></span><span class="ct">Old House Fireplace Ambience for Sleeping • Black Screen • 12H</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/clouds-over-the-forest-4k-screensaver-no-sound-5-hours.html" data-i="relax" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/dLfndBWDJnk/hqdefault.jpg" alt="Clouds Over the Forest — 4K Screensaver, No Sound | 5 Hours" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-relax">Relax</span> <span class="chip k">Black screen</span></span><span class="ct">Clouds Over the Forest — 4K Screensaver, No Sound | 5 Hours</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/summer-lake-campfire-fireplace-ambience-for-sleeping-black-screen.html" data-i="sleep" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/YLJu_z1WBVU/hqdefault.jpg" alt="Summer Lake Campfire Fireplace Ambience for Sleeping • Black Screen" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span> <span class="chip k">Black screen</span></span><span class="ct">Summer Lake Campfire Fireplace Ambience for Sleeping • Black Screen</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/crackling-fireplace-ambience-for-sleeping-black-screen-12h.html" data-i="sleep" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/S1Q5c5Kdw1A/hqdefault.jpg" alt="Crackling Fireplace Ambience for Sleeping • Black Screen • 12H" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span> <span class="chip k">Black screen</span></span><span class="ct">Crackling Fireplace Ambience for Sleeping • Black Screen • 12H</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/forest-edge-cricket-sounds-for-sleeping-black-screen-11h.html" data-i="sleep" data-bs="1"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/hpZKAIoPB_I/hqdefault.jpg" alt="Forest Edge Cricket Sounds for Sleeping • Black Screen • 11H" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span> <span class="chip k">Black screen</span></span><span class="ct">Forest Edge Cricket Sounds for Sleeping • Black Screen • 11H</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/nature-sounds-for-sleeping-no-loops-by-a-wild-bieszczady-river.html" data-i="sleep" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/POmmHWPJyZQ/hqdefault.jpg" alt="Nature Sounds for Sleeping | No Loops by a Wild Bieszczady River" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span></span><span class="ct">Nature Sounds for Sleeping | No Loops by a Wild Bieszczady River</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/live-forest-river-sounds-relaxing-water-ambience-for-sleep-study-relaxation.html" data-i="sleep" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/4BicYXkpMRw/hqdefault.jpg" alt="🔴 LIVE | Forest River Sounds 🌿 Relaxing Water Ambience for Sleep, Study &amp; Relaxation" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-sleep">Sleep</span></span><span class="ct">🔴 LIVE | Forest River Sounds 🌿 Relaxing Water Ambience for Sleep, Study &amp; Relaxation</span></a></div></div></section>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">Blog &amp; podcasts</span><h2>Field notes &amp; new episodes</h2></div>
+    <a class="btn" href="https://naturesoundstherapy.github.io/blog/">Open the blog &rarr;</a></div>
+  <div class="posts rv"><a class="card post" href="https://naturesoundstherapy.github.io/blog/podcast-crackling-fireplace-old-rural-house-for-deep-sleep-12-hours.html"><span class="pthumb"><img loading="lazy" src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/43938506/43938506-1791192521568-19e4eca9895e9.jpg" alt="Crackling Fireplace · Old Rural House for Deep Sleep (12 Hours)"></span><span class="pbody"><span class="src">Sleep Sounds</span><h3>Crackling Fireplace · Old Rural House for Deep Sleep (12 Hours)</h3><p>Close-mic&#x27;d wood fire in the hearth of an old house — the Sennheiser MKE 600 sat low, angled at the burning logs, picking up the soft roar when a log catches, thin bark…</p><span class="date">2026-10-05</span></span></a><a class="card post" href="https://naturesoundstherapy.github.io/blog/podcast-campfire-crackling-white-noise-lake-shore-for-deep-sleep-11-hours.html"><span class="pthumb"><img loading="lazy" src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/43938506/43938506-1791019116061-d82f96546bed2.jpg" alt="Campfire Crackling White Noise · Lake Shore for Deep Sleep (11 Hours)"></span><span class="pbody"><span class="src">Sleep Sounds</span><h3>Campfire Crackling White Noise · Lake Shore for Deep Sleep (11 Hours)</h3><p>Fire sounds for sleep — a real campfire built a few steps from the water on a warm summer night, mic close enough to catch dry wood ticking as it catches and resin…</p><span class="date">2026-10-03</span></span></a><a class="card post" href="https://naturesoundstherapy.github.io/blog/podcast-bieszczady-river-white-noise-for-deep-sleep-focus.html"><span class="pthumb"><img loading="lazy" src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/43938413/43938413-1790238177425-bd053b4381513.jpg" alt="Bieszczady River White Noise · for Deep Sleep &amp; Focus"></span><span class="pbody"><span class="src">Water Sounds for Sleep</span><h3>Bieszczady River White Noise · for Deep Sleep &amp; Focus</h3><p>A wild mountain river in Bieszczady — three days camped on the bank, rocky shores, forest to the water&#x27;s edge, no other people. Sennheiser MKE 600 aimed into the…</p><span class="date">2026-09-24</span></span></a></div></div></section>
+
+<section class="alt" id="about"><div class="wrap two">
+  <div class="rv"><span class="eyebrow">Our story</span><h2>Why we record</h2>
+    <p>We&rsquo;re a father-and-son duo capturing the natural sounds of Poland, the German borderlands and beyond — the Karkonosze, the Masurian Lakes, the Bieszczady, the Black Forest.</p>
+    <p>My son has autism. Forests, mountain trails and running water are where he finds his greatest peace and the freedom to be himself. These trips became our shared world.</p>
+    <p>Every recording is from a specific place on a specific day. Often the microphone simply stays in the forest overnight and listens.</p>
+    <a class="btn" href="https://naturesoundstherapy.github.io/how-we-record.html">How we record</a>
+    <a class="btn" href="https://naturesoundstherapy.github.io/real-vs-ai-nature-sounds.html">Real vs AI sounds</a></div>
+  <div class="panel rv"><h3>The gear</h3><p>Real hardware, honest takes.</p>
+    <div class="gear"><span class="chip">Zoom F3 · 32-bit float</span><span class="chip">Sennheiser MKE 600</span><span class="chip">Rode NT1</span><span class="chip">Lumix S5</span><span class="chip">Insta360 Pro</span></div>
+    <h3 style="margin-top:26px">Licensing</h3><p>Lossless source files for film, games, apps and on-hold systems.</p>
+    <a class="btn btn-gold sm" href="https://naturesoundstherapy.github.io/licensing.html">License a recording</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">360° VR</span><h2>Step inside the recording</h2></div>
+    <a class="btn" href="https://naturesoundstherapy.github.io/360-vr/">All 10 360° films &rarr;</a></div>
+  <div class="grid rv"><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/nature-sounds-for-reading-in-360-vr-bieszczady-mountain-river.html" data-i="relax" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/TCUx8LgSzSA/hqdefault.jpg" alt="Nature Sounds for Reading in 360 VR | Bieszczady Mountain River" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-relax">Relax</span></span><span class="ct">Nature Sounds for Reading in 360 VR | Bieszczady Mountain River</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/forest-lake-birdsong-360-vr-nature-sounds-for-relaxation-calm-24-7-live-3.html" data-i="relax" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/bK6GDzApK-Q/hqdefault.jpg" alt="Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-relax">Relax</span></span><span class="ct">Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/forest-lake-birdsong-360-vr-nature-sounds-for-relaxation-calm-24-7-live-2.html" data-i="relax" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/xrm2E2TzPUs/hqdefault.jpg" alt="Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-relax">Relax</span></span><span class="ct">Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live</span></a><a class="card vid" href="https://naturesoundstherapy.github.io/sounds/forest-lake-birdsong-360-vr-nature-sounds-for-relaxation-calm-24-7-live-4.html" data-i="relax" data-bs="0"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/sEBRd7GH0VU/hqdefault.jpg" alt="Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-relax">Relax</span></span><span class="ct">Forest Lake Birdsong 360° VR • Nature Sounds for Relaxation &amp; Calm • 24/7 Live</span></a></div></div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">Behind the scenes</span><h2>On location, in short</h2></div>
+    <a class="btn" href="https://naturesoundstherapy.github.io/behind-the-scenes/">All 44 clips &rarr;</a></div>
+  <div class="shorts rv"><a class="card short" href="https://www.youtube.com/shorts/D6sLthxz59E" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/D6sLthxz59E/hqdefault.jpg" alt="Golden hour in a pine forest,"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">Golden hour in a pine forest,</span></a><a class="card short" href="https://www.youtube.com/shorts/RXkWz1w2HO8" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/RXkWz1w2HO8/hqdefault.jpg" alt="How we record the lake"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">How we record the lake</span></a><a class="card short" href="https://www.youtube.com/shorts/4nTIFpFFNdI" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/4nTIFpFFNdI/hqdefault.jpg" alt="Cricket Sounds with Frogs in the Meadow | Summer Afternoon"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">Cricket Sounds with Frogs in the Meadow | Summer Afternoon</span></a><a class="card short" href="https://www.youtube.com/shorts/0UHCG3K9EKI" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/0UHCG3K9EKI/hqdefault.jpg" alt="Cricket Sounds for Sleep | Summer Meadow — Short Clip"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">Cricket Sounds for Sleep | Summer Meadow — Short Clip</span></a><a class="card short" href="https://www.youtube.com/shorts/JquH86sactc" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/JquH86sactc/hqdefault.jpg" alt="Cricket Sounds for Sleep | Summer Meadow"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">Cricket Sounds for Sleep | Summer Meadow</span></a><a class="card short" href="https://www.youtube.com/shorts/lJ6MqU2agVk" rel="noopener"><span class="thumb vert"><img loading="lazy" src="https://i.ytimg.com/vi/lJ6MqU2agVk/hqdefault.jpg" alt="Rain on Tin Roof for Sleep | Garage in Meadows — Quick Clip"><span class="play" aria-hidden="true">&#9654;</span></span><span class="ct">Rain on Tin Roof for Sleep | Garage in Meadows — Quick Clip</span></a></div></div></section>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">Find us</span><h2>Watch, listen, follow</h2></div></div>
+  <div class="plat rv"><a href="https://www.youtube.com/channel/UCXmqKRmmSKc6ZmzzLdYq7UA" rel="noopener">YouTube<small>Films & live streams</small></a><a href="https://open.spotify.com/show/7eWucAQkezex642xl3Tofr" rel="noopener">Spotify<small>Podcasts</small></a><a href="https://patreon.com/NatureSoundsTherapy" rel="noopener">Patreon<small>Lossless & longer versions</small></a><a href="https://odysee.com/@Naturesoundstherapy:a" rel="noopener">Odysee<small>Videos</small></a><a href="https://rumble.com/c/NatureSoundsTherapy" rel="noopener">Rumble<small>Videos</small></a><a href="https://www.dailymotion.com/naturesoundstherapy" rel="noopener">Dailymotion<small>Videos</small></a><a href="https://archive.org/details/@nature_sounds_therapy" rel="noopener">Internet Archive<small>Audio archive</small></a><a href="https://www.instagram.com/nature.sounds.therapy/" rel="noopener">Instagram<small>Reels & photos</small></a><a href="https://www.tiktok.com/@naturesoundstherapy" rel="noopener">TikTok<small>Short clips</small></a></div></div></section>
+
+<section class="alt"><div class="wrap narrow">
+  <div class="sec-head rv"><div><span class="eyebrow">FAQ</span><h2>Questions</h2></div></div>
+  <div class="rv"><details><summary>Are the recordings real or AI-generated?</summary><p>Every recording is a real outdoor field recording from a specific place on a specific day — no music, no narration, no loops and no AI. Long continuous takes, often 7–12 hours from a single location, on a Zoom F3 (32-bit float) with a Sennheiser MKE 600 and Rode NT1.</p></details><details><summary>What are the recordings for?</summary><p>Sleep, relaxation and focus: 4K scenic films, black-screen versions for overnight listening, 360° VR soundscapes and podcasts — rain, rivers, birdsong, crickets, wind and forest ambience.</p></details><details><summary>Can I license these recordings for a film, game or app?</summary><p>Yes — lossless source files are available for licensing. See the licensing page or reach out via any of the links on this site.</p></details></div></div></section>
+
+<section><div class="wrap"><div class="banner rv">
+  <h2>Longer versions, lossless files, no ads</h2>
+  <p>Support the recordings on Patreon: extended takes, full-quality downloads and first access to new places.</p>
+  <a class="btn btn-gold" href="https://patreon.com/NatureSoundsTherapy" rel="noopener">&#9829; Join on Patreon</a></div></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="https://naturesoundstherapy.github.io/"><img src="https://naturesoundstherapy.github.io/logo.png" alt="" width="34" height="34"><span>Nature Sounds <b>Therapy</b></span></a>
+      <p class="muted">Real place. Real sound. Real atmosphere. A father-and-son duo — no music, no narration, no AI.</p>
+    </div>
+    <div><h4>Explore</h4>
+      <a href="https://naturesoundstherapy.github.io/library/">All recordings</a><a href="https://naturesoundstherapy.github.io/blog/">Blog &amp; podcasts</a>
+      <a href="https://naturesoundstherapy.github.io/how-we-record.html">How we record</a>
+      <a href="https://naturesoundstherapy.github.io/real-vs-ai-nature-sounds.html">Real vs AI sounds</a>
+      <a href="https://naturesoundstherapy.github.io/licensing.html">Licensing</a></div>
+    <div><h4>Watch &amp; listen</h4>
+      <a href="https://www.youtube.com/channel/UCXmqKRmmSKc6ZmzzLdYq7UA" rel="noopener">YouTube</a>
+      <a href="https://open.spotify.com/show/7eWucAQkezex642xl3Tofr" rel="noopener">Spotify</a>
+      <a href="https://odysee.com/@Naturesoundstherapy:a" rel="noopener">Odysee</a>
+      <a href="https://rumble.com/c/NatureSoundsTherapy" rel="noopener">Rumble</a>
+      <a href="https://www.dailymotion.com/naturesoundstherapy" rel="noopener">Dailymotion</a></div>
+    <div><h4>Follow</h4>
+      <a href="https://www.instagram.com/nature.sounds.therapy/" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@naturesoundstherapy" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/profile.php?id=61575751466636" rel="noopener">Facebook</a>
+      <a href="https://patreon.com/NatureSoundsTherapy" rel="noopener">Patreon</a></div>
+  </div>
+  <div class="wrap legal">&copy; Nature Sounds Therapy &mdash; real one-take outdoor field recordings.
+    <a href="https://naturesoundstherapy.github.io/llms.txt">llms.txt</a> &middot; <a href="https://naturesoundstherapy.github.io/sitemap.xml">sitemap</a> &middot;
+    <a href="https://naturesoundstherapy.github.io/blog/feed.xml">RSS</a>
+    </div>
+</footer>
+
+<script src="https://naturesoundstherapy.github.io/assets/app.js" defer></script>
+</body></html>

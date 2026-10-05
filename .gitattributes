@@ -1,0 +1,6 @@
+# 2026-07-18 (Claude Opus 4.8): normalizacja koncowek linii.
+# site_pages.py pisze pliki z LF; bez tego git widzial CRLF<->LF jako "zmiane"
+# i drzewo bylo WIECZNIE dirty (343 pliki szumu przy kazdej regeneracji).
+# text=auto eol=lf -> git traktuje jako tekst i trzyma LF -> git status czysty,
+# commit tylko realnych zmian (nowe podstrony filmow).
+* text=auto eol=lf
