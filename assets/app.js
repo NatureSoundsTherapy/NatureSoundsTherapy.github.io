@@ -39,8 +39,8 @@ decorate();new MutationObserver(function(){decorate()}).observe(document.body,{c
 $$('[data-sleeptimer]').forEach(function(box){var left=$('.timer-left',box),t=null;
  $$('.pill',box).forEach(function(b){b.addEventListener('click',function(){clearInterval(t);var m=+b.getAttribute('data-min');
   if(!m){left.textContent='';return}var end=Date.now()+m*60000;$$('.pill',box).forEach(function(x){x.classList.toggle('on',x===b)});
-  t=setInterval(function(){var r=end-Date.now();if(r<=0){clearInterval(t);$$('.player').forEach(function(p){var f=p.querySelector('iframe');if(f)f.remove()});left.textContent='Stopped. Good night.';return}
-   left.textContent=Math.ceil(r/60000)+' min left'},1000)})})});
+  t=setInterval(function(){var r=end-Date.now();if(r<=0){clearInterval(t);$$('.player').forEach(function(p){var f=p.querySelector('iframe');if(f)f.remove()});left.textContent=(window.NST&&NST.tdone)||'Stopped. Good night.';return}
+   left.textContent=Math.ceil(r/60000)+((window.NST&&NST.tleft)||' min left')},1000)})})});
 /* licznik odwiedzin */
 var vs=$('.visits');if(vs){fetch('https://'+vs.getAttribute('data-goat')+'.goatcounter.com/counter/TOTAL.json').then(function(r){return r.json()}).then(function(d){$('#visits-n').textContent=d.count;vs.hidden=false}).catch(function(){})}
 /* fala (hero) — czysty canvas, bez audio */
@@ -55,10 +55,18 @@ if(cv&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var c=cv.getConte
 /* lazy embed YT */
 function mount(box,id){box.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>'}
 document.addEventListener('click',function(e){var l=e.target.closest('[data-live]');if(l){e.preventDefault();l.parentNode.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/live_stream?channel='+l.getAttribute('data-live')+'&autoplay=1" title="Live" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';return}var b=e.target.closest('[data-yt]');if(b){e.preventDefault();mount(b.parentNode,b.getAttribute('data-yt'))}});
-/* biblioteka: filtry + szukajka + 'wiecej' */
+/* miniatury: YT zwraca szary placeholder 120x90 dla niedostepnych filmow -> maxres, a potem logo */
+function fixThumbs(root){$$('img[src*="i.ytimg.com/vi/"]',root||document).forEach(function(im){
+ function chk(){if(im.naturalWidth&&im.naturalWidth<=120&&!im.dataset.fb){im.dataset.fb='1';
+  var m=im.src.match(/\/vi\/([^\/]+)\//);im.src='https://i.ytimg.com/vi/'+m[1]+'/maxresdefault.jpg';
+  im.onerror=function(){im.onerror=null;im.src=BASE+'/logo.png';im.style.objectFit='contain'}}
+  else if(im.dataset.fb==='1'&&im.naturalWidth&&im.naturalWidth<=120){im.src=BASE+'/logo.png';im.style.objectFit='contain'}}
+ if(im.complete)chk();im.addEventListener('load',chk)})}
+fixThumbs();new MutationObserver(function(){fixThumbs()}).observe(document.body,{childList:true,subtree:true});
+/* biblioteka: filtry + szukajka + 'wiecej' 
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function card(v){var n={sleep:'Sleep',focus:'Focus',relax:'Relax'}[v.i]||'';
- return '<a class="card vid" href="'+BASE+esc(v.p||('/sounds/'+v.s))+'.html"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/'+esc(v.id)+'/hqdefault.jpg" alt="'+esc(v.t)+'" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-'+esc(v.i)+'">'+n+'</span>'+(v.bs?' <span class="chip k">Black screen</span>':'')+'</span><span class="ct">'+esc(v.t)+'</span></a>'}
+function card(v){var n={sleep:N.b_sleep||'Sleep',focus:N.b_focus||'Focus',relax:N.b_relax||'Relax'}[v.i]||'';
+ return '<a class="card vid" href="'+BASE+esc(v.p||('/sounds/'+v.s))+'.html"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/'+esc(v.id)+'/hqdefault.jpg" alt="'+esc(v.t)+'" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-'+esc(v.i)+'">'+n+'</span>'+(v.bs?' <span class="chip k">'+(N.b_bs||'Black screen')+'</span>':'')+'</span><span class="ct">'+esc(v.t)+'</span></a>'}
 function load(u){return fetch(BASE+u,{cache:'no-cache'}).then(function(r){return r.json()})}
 function dataf(n){return '/data/'+n+(N.lang&&N.lang!=='en'?'.'+N.lang:'')+'.json'}
 var lib=$('#lib');
