@@ -35,6 +35,10 @@ section{padding:76px 0}.alt{background:var(--bg2);border-block:1px solid var(--l
 .btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:var(--sh)}
 .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1405;border:0}
 .btn-green{background:var(--green);color:#06160c;border:0}.btn.sm{padding:8px 16px;font-size:.9rem}
+.btn-pp{background:#ffc439;color:#003087;border:0;margin-left:6px;gap:6px}.btn-pp:hover{background:#ffb700}
+.pp-blink{animation:ppblink 2.4s ease-in-out infinite}@keyframes ppblink{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion:reduce){.pp-blink{animation:none}}
+@media (max-width:560px){.btn-pp .pp-blink{font-size:.8rem}}
 /* hero */
 .hero{position:relative;overflow:hidden;padding:110px 0 90px;border-bottom:1px solid var(--line);isolation:isolate}
 .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(900px 500px at 78% -10%,rgba(127,194,150,.22),transparent 60%),radial-gradient(700px 420px at 8% 110%,rgba(230,185,104,.14),transparent 60%)}
