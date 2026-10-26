@@ -40,6 +40,7 @@ section{padding:76px 0}.alt{background:var(--bg2);border-block:1px solid var(--l
 @media (prefers-reduced-motion:reduce){.pp-blink{animation:none}}
 @media (max-width:600px){.nav-in{gap:8px;padding-left:14px;padding-right:14px}.lang{width:max-content;flex:0 0 auto}.nav .themebtn{display:none}.lang summary{padding:6px 9px}.brand span{font-size:.95rem}.brand img{width:28px;height:28px}
  .nav .btn.btn-pp{display:inline-flex;padding:6px 9px;margin-left:2px}.nav .btn-pp .pp-blink{font-size:.78rem}}
+@media (max-width:600px){.page{padding:24px 16px 48px}.langs a{padding:8px 14px;font-size:.9rem}}
 @media (max-width:400px){.brand span b{display:none}.nav .btn-pp .pp-blink{display:none}}
 /* hero */
 .hero{position:relative;overflow:hidden;padding:110px 0 90px;border-bottom:1px solid var(--line);isolation:isolate}
@@ -130,7 +131,7 @@ summary::-webkit-details-marker{display:none}details p{padding-bottom:6px}
 .shorts{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
 .thumb.vert{aspect-ratio:9/16}.card.short .ct{font-size:.88rem;padding:10px 12px 14px}
 /* podstrony nagran (site_pages) */
-.page{padding:40px 0 60px;max-width:820px}.crumb{font-size:.88rem;color:var(--muted);margin-bottom:14px}
+.page{padding:40px 22px 60px;max-width:820px}.crumb{font-size:.88rem;color:var(--muted);margin-bottom:14px}
 .langs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}.langs a{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.8rem;color:var(--soft)}.langs a.on{background:var(--gold);color:#1a1405;border-color:var(--gold)}
 .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:22px 0}.box a{margin-right:14px;font-weight:600}
 .pi{display:inline-block;vertical-align:-3px;margin-inline-end:6px;flex:none}.foot a .pi,.plat a .pi{margin-inline-end:7px}
