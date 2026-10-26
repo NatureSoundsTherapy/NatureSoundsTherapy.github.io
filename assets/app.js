@@ -92,10 +92,10 @@ if(pk){load('/data/library.json').then(function(D){
  $$('.pill',pk).forEach(function(b){b.addEventListener('click',function(){pick(b.getAttribute('data-p'))})});pick('sleep')})}
 /* blog */
 var bl=$('#blog');
-if(bl){load('/data/blog.json').then(function(D){
+if(bl){(N.lang&&N.lang!=='en'?load('/data/blog.'+N.lang+'.json').catch(function(){return load('/data/blog.json')}):load('/data/blog.json')).then(function(D){
  var q='',src='all',per=18,shown=per,g=$('#blog-grid'),more=$('#blog-more');
  function pc(p){var lock=p.lock?' lock':'',im=p.im?'<span class="pthumb"><img loading="lazy" src="'+esc(p.im)+'" alt="'+esc(p.t)+'"></span>':'<span class="pthumb ph"><img src="'+BASE+'/logo.png" alt="" loading="lazy"></span>';
-  return '<a class="card post'+lock+'" href="'+(p.lock?p.u:BASE+'/blog/'+p.s+'.html')+'"'+(p.lock?' target="_blank" rel="noopener"':'')+'>'+im+'<span class="pbody"><span class="src">'+esc(p.src)+(p.lock?' &middot; &#128274; members':'')+'</span><h3>'+esc(p.t)+'</h3>'+(p.x?'<p>'+esc(p.x)+'</p>':'')+'<span class="date">'+esc(p.d)+'</span></span></a>'}
+  return '<a class="card post'+lock+'" href="'+(p.lock?p.u:(p.h||BASE+'/blog/'+p.s+'.html'))+'"'+(p.lock?' target="_blank" rel="noopener"':'')+'>'+im+'<span class="pbody"><span class="src">'+esc(p.src)+(p.lock?' &middot; &#128274; members':'')+'</span><h3>'+esc(p.t)+'</h3>'+(p.x?'<p>'+esc(p.x)+'</p>':'')+'<span class="date">'+esc(p.d)+'</span></span></a>'}
  function f(){return D.filter(function(p){return (src==='all'||p.g===src)&&(!q||(p.t+' '+(p.x||'')).toLowerCase().indexOf(q)>=0)})}
  function r(){var L=f();g.innerHTML=L.length?L.slice(0,shown).map(pc).join(''):'<div class="empty">No posts found.</div>';more.style.display=L.length>shown?'':'none';
   $$('.pill[data-g]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-g')===src)})}
