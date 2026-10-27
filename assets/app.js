@@ -63,7 +63,7 @@ function fixThumbs(root){$$('img[src*="i.ytimg.com/vi/"]',root||document).forEac
   else if(im.dataset.fb==='1'&&im.naturalWidth&&im.naturalWidth<=120){im.src=BASE+'/logo.png';im.style.objectFit='contain'}}
  if(im.complete)chk();im.addEventListener('load',chk)})}
 fixThumbs();new MutationObserver(function(){fixThumbs()}).observe(document.body,{childList:true,subtree:true});
-/* biblioteka: filtry + szukajka + 'wiecej' 
+/* biblioteka: filtry + szukajka + 'wiecej' */
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function card(v){var n={sleep:N.b_sleep||'Sleep',focus:N.b_focus||'Focus',relax:N.b_relax||'Relax'}[v.i]||'';
  return '<a class="card vid" href="'+BASE+esc(v.p||('/sounds/'+v.s))+'.html"><span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/'+esc(v.id)+'/hqdefault.jpg" alt="'+esc(v.t)+'" width="480" height="360"><span class="play" aria-hidden="true">&#9654;</span></span><span class="meta"><span class="chip i-'+esc(v.i)+'">'+n+'</span>'+(v.bs?' <span class="chip k">'+(N.b_bs||'Black screen')+'</span>':'')+(v.tg?' <span class="chip k">'+(N.b_snoring||'Snoring')+'</span>':'')+'</span><span class="ct">'+esc(v.t)+'</span></a>'}
