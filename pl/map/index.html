@@ -35,10 +35,10 @@
 </header>
 <main id="main">
 <section class="wrap page">
-<h1>Gdzie nagrywaliśmy</h1><p class="lead">Każda pinezka to prawdziwe nagranie z tej strony. Lokalizacje zaokrąglone do ok. 3 km. (2)</p>
+<h1>Gdzie nagrywaliśmy</h1><div class="sharebar"><button class="btn sm share-btn" type="button" data-share data-ok="Skopiowano!">&#10150; Udostępnij</button></div><div class="share-pop" hidden role="dialog" aria-label="Udostępnij"><div class="share-in"><button class="share-x" type="button" aria-label="Close">&times;</button><strong>Udostępnij</strong><div class="share-row"><input class="share-url" readonly><button class="btn sm" type="button" data-copy>Kopiuj link</button></div><div class="share-net"></div></div></div><p class="lead">Każda pinezka to prawdziwe nagranie z tej strony. Lokalizacje zaokrąglone do ok. 3 km. (2)</p>
 <div id="nstmap" style="height:70vh;min-height:420px;border-radius:14px;overflow:hidden;border:1px solid var(--line)"></div>
 </section>
-<script>(function(){var D=[{"la": 51.5347, "lo": 15.276, "m": "near Lubań", "t": "Śpiew ptaków i świerszcze do snu • Łąka przy lesie", "u": "https://naturesoundstherapy.github.io/sounds/pl/spiew-ptakow-i-swierszcze-do-snu-laka-przy-lesie.html", "img": "https://i.ytimg.com/vi/i5eY7yAUlNA/mqdefault.jpg"}, {"la": 50.8718, "lo": 15.4042, "m": "Kwisa, Góry Izerskie", "t": "River Sounds for Sleep, Black Screen • Kwisa Mountain River • 10 Hours", "u": "https://naturesoundstherapy.github.io/sounds/river-sounds-for-sleep-black-screen-kwisa-mountain-river-10-hours.html", "img": "https://i.ytimg.com/vi/MxyNee_RT84/mqdefault.jpg"}];
+<script>(function(){var D=[{"la": 51.5347, "lo": 15.177, "m": "near Lubań", "t": "Śpiew ptaków i świerszcze do snu • Łąka przy lesie", "u": "https://naturesoundstherapy.github.io/sounds/pl/spiew-ptakow-i-swierszcze-do-snu-laka-przy-lesie.html", "img": "https://i.ytimg.com/vi/i5eY7yAUlNA/mqdefault.jpg"}, {"la": 50.8718, "lo": 15.4042, "m": "Kwisa, Góry Izerskie", "t": "River Sounds for Sleep, Black Screen • Kwisa Mountain River • 10 Hours", "u": "https://naturesoundstherapy.github.io/sounds/river-sounds-for-sleep-black-screen-kwisa-mountain-river-10-hours.html", "img": "https://i.ytimg.com/vi/MxyNee_RT84/mqdefault.jpg"}];
 var c=document.createElement('link');c.rel='stylesheet';c.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';document.head.appendChild(c);
 var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';s.onload=function(){
 var m=L.map('nstmap',{scrollWheelZoom:false,maxZoom:11,minZoom:3});m.on('click',function(){m.scrollWheelZoom.enable()});
@@ -47,7 +47,20 @@ var b=[];D.forEach(function(p){b.push([p.la,p.lo]);
 L.marker([p.la,p.lo],{icon:L.divIcon({className:'',html:'<div class="nst-pin"></div>',iconSize:[22,22],iconAnchor:[11,22]})}).addTo(m)
 .bindPopup('<a href="'+p.u+'"><img src="'+p.img+'" alt="" style="width:200px;border-radius:8px;display:block;margin-bottom:6px">'+p.t.replace(/</g,'&lt;')+'</a>'+(p.m?'<br><small>'+p.m.replace(/</g,'&lt;')+'</small>':''))});
 if(b.length)m.fitBounds(b,{padding:[40,40],maxZoom:8});else m.fitBounds([[35,-10],[60,30]])};document.head.appendChild(s)})();</script>
-<style>.nst-pin{width:22px;height:22px;border-radius:50% 50% 50% 0;background:#d4a017;border:2px solid #fff;transform:rotate(-45deg);box-shadow:0 1px 5px rgba(0,0,0,.5)}</style>
+<style>.nst-pin{width:22px;height:22px;border-radius:50% 50% 50% 0;background:#d4a017;border:2px solid #fff;transform:rotate(-45deg);box-shadow:0 1px 5px rgba(0,0,0,.5)}</style><script>(function(){document.addEventListener('click',function(e){
+var b=e.target.closest&&e.target.closest('[data-share]');var pop=document.querySelector('.share-pop');
+if(b){e.preventDefault();var u=location.href.split('#')[0],t=document.title;
+ if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'udostepnij'+location.pathname,title:'Udostepnij',event:true});
+ if(navigator.share&&matchMedia('(pointer:coarse)').matches){navigator.share({title:t,url:u}).catch(function(){});return}
+ var E=encodeURIComponent,n=[['X','https://x.com/intent/post?url='+E(u)+'&text='+E(t)],['Facebook','https://www.facebook.com/sharer/sharer.php?u='+E(u)],
+ ['WhatsApp','https://wa.me/?text='+E(t+' '+u)],['Telegram','https://t.me/share/url?url='+E(u)+'&text='+E(t)],['Reddit','https://www.reddit.com/submit?url='+E(u)+'&title='+E(t)],
+ ['Pinterest','https://pinterest.com/pin/create/button/?url='+E(u)+'&description='+E(t)],['Bluesky','https://bsky.app/intent/compose?text='+E(t+' '+u)],['E-mail','mailto:?subject='+E(t)+'&body='+E(u)]];
+ pop.querySelector('.share-url').value=u;pop.querySelector('.share-net').innerHTML=n.map(function(x){return '<a class="pill" target="_blank" rel="noopener" href="'+x[1]+'">'+x[0]+'</a>'}).join('');
+ pop.dataset.ok=b.dataset.ok;pop.hidden=false;return}
+if(e.target.closest&&e.target.closest('[data-copy]')){var i=pop.querySelector('.share-url');i.select();
+ (navigator.clipboard?navigator.clipboard.writeText(i.value):Promise.reject()).catch(function(){document.execCommand('copy')});e.target.textContent=pop.dataset.ok;return}
+if(pop&&!pop.hidden&&(e.target===pop||e.target.closest('.share-x')))pop.hidden=true});
+document.addEventListener('keydown',function(e){var p=document.querySelector('.share-pop');if(e.key==='Escape'&&p)p.hidden=true})})();</script><style>.sharebar{margin:10px 0 18px}.share-pop{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;display:flex;align-items:center;justify-content:center;padding:16px}.share-pop[hidden]{display:none}.share-in{background:var(--card);color:var(--ink);border-radius:16px;padding:20px;max-width:440px;width:100%;position:relative;box-shadow:var(--sh)}.share-x{position:absolute;top:8px;right:12px;border:0;background:none;font-size:1.6rem;cursor:pointer;color:var(--soft)}.share-row{display:flex;gap:8px;margin:12px 0}.share-url{flex:1;min-width:0;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--ink)}.share-net{display:flex;flex-wrap:wrap;gap:6px}</style>
 </main>
 <footer class="foot">
   <div class="wrap foot-in">
