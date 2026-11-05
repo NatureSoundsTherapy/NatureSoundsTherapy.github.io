@@ -39,7 +39,7 @@ decorate();new MutationObserver(function(){decorate()}).observe(document.body,{c
 $$('[data-sleeptimer]').forEach(function(box){var left=$('.timer-left',box),t=null;
  $$('.pill',box).forEach(function(b){b.addEventListener('click',function(){clearInterval(t);var m=+b.getAttribute('data-min');
   if(!m){left.textContent='';return}var end=Date.now()+m*60000;$$('.pill',box).forEach(function(x){x.classList.toggle('on',x===b)});
-  t=setInterval(function(){var r=end-Date.now();if(r<=0){clearInterval(t);$$('.player').forEach(function(p){var f=p.querySelector('iframe');if(f)f.remove()});left.textContent=(window.NST&&NST.tdone)||'Stopped. Good night.';return}
+  t=setInterval(function(){var r=end-Date.now();if(r<=0){clearInterval(t);$$('.player').forEach(function(p){var f=p.querySelector('iframe');if(f)f.remove()});$$('audio.probka').forEach(function(x){x.pause()});left.textContent=(window.NST&&NST.tdone)||'Stopped. Good night.';return}
    left.textContent=Math.ceil(r/60000)+((window.NST&&NST.tleft)||' min left')},1000)})})});
 /* licznik odwiedzin */
 var vs=$('.visits');if(vs){fetch('https://'+vs.getAttribute('data-goat')+'.goatcounter.com/counter/TOTAL.json').then(function(r){return r.json()}).then(function(d){$('#visits-n').textContent=d.count;vs.hidden=false}).catch(function(){})}
