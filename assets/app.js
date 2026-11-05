@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
-var N=window.NST||{lang:'en',path:'/'};var BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?location.origin:'https://naturesoundstherapy.github.io';
+var N=window.NST||{lang:'en',path:'/'};var BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?location.origin:'https://naturesoundstherapy.com';
 /* pamiec jezyka: klik w przelacznik zapisuje; EN strona z odpowiednikiem -> przekierowanie */
 try{document.addEventListener('click',function(e){var a=e.target.closest('[data-setlang]');if(a)localStorage.setItem('nst-lang',a.getAttribute('data-setlang'))});
  var sl=localStorage.getItem('nst-lang');if(sl&&sl!=='en'&&N.lang==='en'&&N.path&&N.path.charAt(0)==='/'&&!/^\/(sounds|blog\/.+\.html)/.test(location.pathname.replace(/^\/+/,'/'))&&document.documentElement.getAttribute('data-nstlang')==='en'&&N.path!=='none'){location.replace(BASE+'/'+sl+N.path+location.hash)}}catch(e){}
